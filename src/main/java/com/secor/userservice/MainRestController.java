@@ -10,9 +10,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("api/v1")
 public class MainRestController {
 
-
     private static final Logger log = LoggerFactory.getLogger(MainRestController.class);
-
 
     @Autowired
     UserDetailRepository userDetailRepository;
@@ -35,7 +33,5 @@ public class MainRestController {
         userDetailRepository.save(userDetail);
         return ResponseEntity.ok(userDetail);
     }
-
-
 
 }
